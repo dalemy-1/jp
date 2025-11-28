@@ -175,7 +175,7 @@
       width: 18px;
       height: 18px;
       border-radius: 999px;
-      background: linear-gradient(90deg,#000 0 33%,#dd0000 33% 66%,#ffce00 66% 100%);
+      background: linear-gradient(90deg,#ffffff 0 50%, #bc002d 50% 100%);
       box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.6);
     }
     .badge-soft { font-size: 0.78rem; color: #6b7280; }
@@ -494,15 +494,15 @@
   <main>
     <section class="intro-layout">
       <article class="card">
-        <h1>Amazon.de product cards with real ASIN links.</h1>
+        <h1>Amazon.co.jp product cards with real ASIN links.</h1>
         <p>
           As an Amazon Associate I earn from qualifying purchases.
           Some links on this page are affiliate links.
         </p>
         <p>
-          This page uses real Amazon.de ASINs and editorial-style summaries,
+          This page uses real Amazon.co.jp ASINs and editorial-style summaries,
           displayed in a grid that is designed to be friendly for Amazon Associates.
-          Each card leads directly to the matching product page on Amazon.de with the
+          Each card leads directly to the matching product page on Amazon.co.jp with the
           affiliate tag applied.
         </p>
         <div class="meta-row">
@@ -529,7 +529,7 @@
         <h2>How to use this shortlist</h2>
         <p>
           Each product card gives you a short editorial-style note plus a direct
-          link to the live Amazon.de product page. Treat this page as a curated
+          link to the live Amazon.co.jp product page. Treat this page as a curated
           shortlist, not a replacement for reading the full details and reviews
           on Amazon.
         </p>
@@ -546,13 +546,13 @@
             style note.
           </li>
           <li>
-            Click <strong>"Go to Amazon"</strong> to see full details, current
+            Click <strong>"View details"</strong> to see full details, current
             pricing and customer reviews.
           </li>
         </ul>
         <p>
           Final pricing, availability and review scores are always determined by
-          Amazon.de on their own pages.
+          Amazon.co.jp on their own pages.
         </p>
       </aside>
     </section>
@@ -614,17 +614,17 @@
       </article>
 
       <article class="card info-card">
-        <h3>About this DE shortlist</h3>
+        <h3>About this JP shortlist  </h3>
         <p>
-          All products on this page are selected from Amazon.de using publicly
+          All products on this page are selected from Amazon.co.jp using publicly
           available information such as product descriptions, feature lists and
-          typical German usage scenarios. The focus is on clear, balanced everyday
+          typical Japanese usage scenarios. The focus is on clear, balanced everyday
           picks rather than chasing only the newest or most expensive models.
         </p>
         <p>
           We do not claim that any single item here is objectively the “best”
           choice for everyone. Instead, each entry is a snapshot of a product that
-          could be a reasonable option for German shoppers when matched to the
+          could be a reasonable option for Japanese shoppers when matched to the
           right person and budget.
         </p>
       </article>
@@ -633,21 +633,21 @@
         <h3>Privacy &amp; data</h3>
         <p>
           This site does not collect payment details or process orders. All
-          transactions take place on Amazon.de or other third-party sites after
+          transactions take place on Amazon.co.jp or other third-party sites after
           you click through an external link.
         </p>
         <p>
           Basic traffic analytics may be used to understand anonymous page usage
           such as page views and clicks. For the latest information on how your
           data is handled, please always check the privacy policy and terms of use
-          on Amazon.de.
+          on Amazon.co.jp.
         </p>
       </article>
 
       <article class="card info-card">
         <h3>Affiliate disclosure</h3>
         <p>
-          Deep Review • Smart Picks DE participates in the Amazon Associates
+          Deep Review • Smart Picks JP participates in the Amazon Associates
           Program. This means that we may earn a small commission on qualifying
           purchases made through links marked as Amazon affiliate links, at no
           additional cost to you.
@@ -656,7 +656,7 @@
           Product selection and editorial notes are created independently and are
           not endorsed or pre-approved by Amazon. Prices, availability and
           promotional offers can change at any time; only the information shown on
-          Amazon.de at the moment of your visit is considered current.
+          Amazon.co.jp at the moment of your visit is considered current.
         </p>
       </article>
     </section>
@@ -678,7 +678,7 @@
           class="btn btn-primary"
           id="reviewModalAmazonLink"
         >
-          Go to Amazon
+          View details
         </a>
       </div>
     </div>
@@ -771,18 +771,18 @@
       const broadCat = CATEGORY_MAP[p.category] || "Office & Daily Use";
       const title = `Product #${index + 1} – ${broadCat} Pick`;
       const hook =
-        `This pick is designed as a practical option in the ${broadCat.toLowerCase()} space for German shoppers, balancing everyday performance and value.`;
+        `This pick is designed as a practical option in the ${broadCat.toLowerCase()} space for Japanese shoppers, balancing everyday performance and value.`;
       const details =
-        "Use this shortlist as a quick way to spot products that may deserve a closer look on Amazon.de. Each card focuses on simple fit, features and everyday German use rather than chasing extreme specs.";
-      const approxPriceLabel = "Check live price on Amazon.de";
+        "Use this shortlist as a quick way to spot products that may deserve a closer look on Amazon.co.jp. Each card focuses on simple fit, features and everyday Japanese use rather than chasing extreme specs.";
+      const approxPriceLabel = "Check live price on Amazon.co.jp";
       const amazonUrl = `https://${AMAZON_DOMAIN}/dp/${p.asin}/?tag=${AFFILIATE_TAG}`;
       const reviewText =
         `${title}\n\n` +
-        `This Germany-focused editorial note highlights key reasons why this item might be a good fit:\n` +
+        `This Japanesey-focused editorial note highlights key reasons why this item might be a good fit:\n` +
         `• Everyday use: aimed at typical home or personal use rather than specialist scenarios.\n` +
         `• Effort vs. benefit: chosen where setup, maintenance and day-to-day use feel reasonable for most people.\n` +
         `• Value: not always the absolute cheapest, but offering a sensible balance of features for the price.\n\n` +
-        `Always open the full Amazon.de product page to check the latest details, compatibility notes and customer reviews before you decide.`;
+        `Always open the full Amazon.co.jp product page to check the latest details, compatibility notes and customer reviews before you decide.`;
       return {
         ...p,
         broadCategory: broadCat,
@@ -840,7 +840,7 @@
                   Read review
                 </button>
                 <a class="btn btn-primary" href="${p.amazonUrl}" target="_blank" rel="nofollow noopener sponsored">
-                  Go to Amazon
+                  View details
                 </a>
               </div>
             </div>
@@ -903,7 +903,7 @@
     function openReviewModal(product) {
       modalTitle.textContent = product.title.replace(
         "Pick",
-        "– Selected item from Amazon.de"
+        "– Selected item from Amazon.co.jp"
       );
       modalBody.textContent = product.reviewText;
       modalAmazonLink.href = product.amazonUrl;
